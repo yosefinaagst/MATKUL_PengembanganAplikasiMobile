@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                 ) { innerPadding ->
 
                     Profile(
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
                     )
                 }
             }
