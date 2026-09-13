@@ -50,8 +50,6 @@ fun Profile(modifier: Modifier = Modifier) {
 
         ProfileIdentity()
 
-        Spacer(modifier = Modifier.height(32.dp))
-
         StudyCard()
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -129,7 +127,7 @@ fun StudyCard() {
             .padding(horizontal = 20.dp),
         shape = RoundedCornerShape(18.dp),
         color = Color.White,
-        shadowElevation = 2.dp
+        shadowElevation = 1.dp
     ) {
 
         Row(
@@ -177,7 +175,7 @@ fun StudyCard() {
                     color = Color.Gray
                 )
 
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(4.dp))
 
                 Text(
                     text = "Ilmu Komputer",
