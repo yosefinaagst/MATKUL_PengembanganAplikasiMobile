@@ -93,7 +93,7 @@ fun ProfileIdentity() {
 
         Image(
             painter = painterResource(R.drawable.background),
-            contentDescription = "Foto Profil",
+            contentDescription = "Foto Profile",
             modifier = Modifier
                 .size(110.dp)
                 .clip(CircleShape),
