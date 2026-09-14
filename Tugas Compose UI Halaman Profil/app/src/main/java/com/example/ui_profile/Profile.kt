@@ -1,7 +1,5 @@
 package com.example.ui_profile
 
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -20,7 +18,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -30,7 +27,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -41,6 +37,13 @@ import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material3.Icon
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.foundation.clickable
+import androidx.compose.material.icons.filled.Code
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Whatsapp
+import androidx.compose.ui.graphics.vector.ImageVector
 
 @Composable
 fun Profile(modifier: Modifier = Modifier) {
@@ -76,7 +79,7 @@ fun ProfileHeader() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(230.dp)
+            .height(180.dp)
     ) {
 
         Image(
@@ -201,7 +204,7 @@ fun StudentInformationCard() {
             .padding(horizontal = 20.dp),
         shape = RoundedCornerShape(18.dp),
         color = Color.White,
-        shadowElevation = 2.dp
+        shadowElevation = 1.dp
     ) {
 
         Column(
@@ -215,6 +218,14 @@ fun StudentInformationCard() {
                 icon = Icons.Default.School,
                 title = "Universitas",
                 value = "Brawijaya"
+            )
+
+            Divider(color = Color(0xFFE5E5E5))
+
+            InformationRow(
+                icon = Icons.Default.CheckCircle,
+                title = "Status",
+                value = "Mahasiswa Aktif"
             )
 
             Divider(color = Color(0xFFE5E5E5))
@@ -235,11 +246,6 @@ fun StudentInformationCard() {
 
             Divider(color = Color(0xFFE5E5E5))
 
-            InformationRow(
-                icon = Icons.Default.CheckCircle,
-                title = "Benar",
-                value = "9/12"
-            )
         }
     }
 }
@@ -310,13 +316,25 @@ fun SocialMediaCard() {
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
 
-                SocialMediaButton("IG")
+                SocialMediaButton(
+                    icon = Icons.Default.Person,
+                    url = "https://www.instagram.com/titinnnpjm_"
+                )
 
-                SocialMediaButton("in")
+                SocialMediaButton(
+                    icon = Icons.Default.Person,
+                    url = "https://www.linkedin.com/in/yosefinaagustine"
+                )
 
-                SocialMediaButton("Git")
+                SocialMediaButton(
+                    icon = Icons.Default.Code,
+                    url = "https://github.com/yosefinaagust"
+                )
 
-                SocialMediaButton("WA")
+                SocialMediaButton(
+                    icon = Icons.Default.Whatsapp,
+                    url = "https://wa.me/6281338377658"
+                )
             }
         }
     }
@@ -324,21 +342,26 @@ fun SocialMediaCard() {
 
 @Composable
 fun SocialMediaButton(
-    text: String
+    icon: ImageVector,
+    url: String
 ) {
+    val uriHandler = LocalUriHandler.current
 
     Box(
         modifier = Modifier
             .size(52.dp)
             .clip(CircleShape)
-            .background(Color(0xFFD1C1D1)),
+            .background(Color(0xFFD1C1D1))
+            .clickable {
+                uriHandler.openUri(url)
+            },
         contentAlignment = Alignment.Center
     ) {
-
-        Text(
-            text = text,
-            fontWeight = FontWeight.Bold,
-            color = Color(0xFF745D74)
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            modifier = Modifier.size(26.dp),
+            tint = Color(0xFF745D74)
         )
     }
 }
