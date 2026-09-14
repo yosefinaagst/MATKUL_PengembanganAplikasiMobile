@@ -35,6 +35,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.CalendarMonth
+import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material3.Icon
 
 @Composable
 fun Profile(modifier: Modifier = Modifier) {
@@ -189,15 +195,150 @@ fun StudyCard() {
 
 @Composable
 fun StudentInformationCard() {
+    Surface(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp),
+        shape = RoundedCornerShape(18.dp),
+        color = Color.White,
+        shadowElevation = 2.dp
+    ) {
 
+        Column(
+            modifier = Modifier.padding(
+                horizontal = 18.dp,
+                vertical = 14.dp
+            )
+        ) {
+
+            InformationRow(
+                icon = Icons.Default.School,
+                title = "Universitas",
+                value = "Brawijaya"
+            )
+
+            Divider(color = Color(0xFFE5E5E5))
+
+            InformationRow(
+                icon = Icons.Default.AccountCircle,
+                title = "Semester",
+                value = "5"
+            )
+
+            Divider(color = Color(0xFFE5E5E5))
+
+            InformationRow(
+                icon = Icons.Default.CalendarMonth,
+                title = "Tahun Masuk",
+                value = "2024"
+            )
+
+            Divider(color = Color(0xFFE5E5E5))
+
+            InformationRow(
+                icon = Icons.Default.CheckCircle,
+                title = "Benar",
+                value = "9/12"
+            )
+        }
+    }
 }
 
 @Composable
-fun InformationRow() {
+fun InformationRow(
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    title: String,
+    value: String
+) {
 
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 14.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+
+        Icon(
+            imageVector = icon,
+            contentDescription = title,
+            modifier = Modifier.size(23.dp),
+            tint = Color.Black
+        )
+
+        Spacer(modifier = Modifier.width(14.dp))
+
+        Text(
+            text = title,
+            modifier = Modifier.weight(1f),
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Medium
+        )
+
+        Text(
+            text = value,
+            fontSize = 14.sp
+        )
+    }
 }
 
 @Composable
 fun SocialMediaCard() {
 
+    Surface(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp),
+        shape = RoundedCornerShape(18.dp),
+        color = Color.White,
+        shadowElevation = 2.dp
+    ) {
+
+        Column(
+            modifier = Modifier.padding(18.dp)
+        ) {
+
+            Text(
+                text = "Media Sosial",
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Medium
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+
+                SocialMediaButton("IG")
+
+                SocialMediaButton("in")
+
+                SocialMediaButton("Git")
+
+                SocialMediaButton("WA")
+            }
+        }
+    }
+}
+
+@Composable
+fun SocialMediaButton(
+    text: String
+) {
+
+    Box(
+        modifier = Modifier
+            .size(52.dp)
+            .clip(CircleShape)
+            .background(Color(0xFFD1C1D1)),
+        contentAlignment = Alignment.Center
+    ) {
+
+        Text(
+            text = text,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF745D74)
+        )
+    }
 }
