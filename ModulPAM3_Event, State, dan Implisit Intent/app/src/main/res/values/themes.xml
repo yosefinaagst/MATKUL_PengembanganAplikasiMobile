@@ -2,4 +2,6 @@
 <resources>
 
     <style name="Theme.PAM3_Modul" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.PAM3" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>

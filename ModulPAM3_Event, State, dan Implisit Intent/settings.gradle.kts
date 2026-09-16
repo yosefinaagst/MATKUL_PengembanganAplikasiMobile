@@ -24,4 +24,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "PAM3_Modul"
 include(":app")
+include(":app")
  
