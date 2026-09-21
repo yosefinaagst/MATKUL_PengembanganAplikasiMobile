@@ -48,17 +48,3 @@ Total pembayaran dihitung menggunakan:
 ```kotlin
 val totalBayar = hargaTiket * jumlahTiket
 ```
-
-## 📸 Hasil Aplikasi
-
-### Kondisi Awal
-
-Jumlah tiket pada kondisi awal adalah **1 tiket** dengan total pembayaran **Rp25.000**.
-
-![Kondisi Awal](screenshots/kondisi-awal.png)
-
-### Setelah Jumlah Tiket Ditambah
-
-Contoh setelah tombol `+` ditekan dua kali, jumlah tiket berubah menjadi **3 tiket** dan total pembayaran menjadi **Rp75.000**.
-
-![Setelah Ditambah](screenshots/setelah-ditambah.png)
