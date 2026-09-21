@@ -1,16 +1,14 @@
 # 🎟️ Aplikasi Pemesanan Tiket
 
-Aplikasi Android sederhana untuk melakukan simulasi pemesanan tiket.  
 Aplikasi ini dibuat menggunakan **Kotlin** dan **Jetpack Compose** sebagai bagian dari tugas praktikum Pemrograman Aplikasi Perangkat Bergerak.
 
 ### 📄 Jawaban Praktikum
 Keseluruhan jawaban modul dapat dilihat pada file berikut:
 [📄 Jawaban Praktikum](Jawaban-Praktikum.pdf)
 
-## 💰 Pengimpelemntasian Harga Tiket
+## Pengimpelemntasian Harga Tiket
 
-Harga satu tiket ditetapkan sebesar:
-
+Harga satu tiket ditetapkan sebesar: 
 **Rp25.000 / tiket**
 
 Total pembayaran dihitung berdasarkan:
@@ -33,9 +31,8 @@ Contoh:
 - Android Studio
 - Jetpack Compose
 - Material 3
-
+- 
 ## 🧠 Implementasi State
-
 Jumlah tiket disimpan menggunakan state Jetpack Compose:
 
 ```kotlin
