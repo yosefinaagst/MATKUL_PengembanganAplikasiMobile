@@ -4,7 +4,7 @@ Aplikasi ini dibuat menggunakan **Kotlin** dan **Jetpack Compose** sebagai bagia
 
 ### 📄 Jawaban Praktikum
 Keseluruhan jawaban modul dapat dilihat pada file berikut:
-[📄 Jawaban Praktikum](Jawaban-Praktikum.pdf)
+[📄 Jawaban Praktikum](Jawaban-Praktikum1.pdf)
 
 ## Pengimpelemntasian Harga Tiket
 
