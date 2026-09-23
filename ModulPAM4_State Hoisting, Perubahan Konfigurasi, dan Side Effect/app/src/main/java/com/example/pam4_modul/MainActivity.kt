@@ -37,7 +37,7 @@ fun CounterScreen(modifier: Modifier) {
     val label by remember { mutableStateOf("Increment") }
     Column(modifier) {
         Text(text = "$number", fontSize = 72.sp)
-        Button(onClick = { number += 2 }) {
+        Button(onClick = { number++ }) {
             Text(text = "$label")
         }
     }
