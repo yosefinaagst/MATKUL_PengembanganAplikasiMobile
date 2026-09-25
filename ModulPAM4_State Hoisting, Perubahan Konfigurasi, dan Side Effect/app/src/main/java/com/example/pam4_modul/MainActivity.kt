@@ -26,18 +26,26 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CounterScreen(modifier = Modifier.padding(32.dp))
+            var number by remember { mutableStateOf(1) }
+
+            CounterScreen(
+                modifier = Modifier.padding(32.dp),
+                number = number,
+                label = "Double",
+                onButtonClick = { number *= 2 }
+            )
         }
     }
 }
 
 @Composable
-fun CounterScreen(modifier: Modifier) {
+fun CounterScreen(modifier: Modifier,
+                  number: Int, label: String, onButtonClick: () -> Unit) {
     var number by remember { mutableStateOf(0) }
     val label by remember { mutableStateOf("Increment") }
     Column(modifier) {
         Text(text = "$number", fontSize = 72.sp)
-        Button(onClick = { number += 2 }) {
+        Button(onClick = onButtonClick) {
             Text(text = "$label")
         }
     }
