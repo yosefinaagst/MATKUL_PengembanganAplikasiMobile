@@ -5,7 +5,7 @@
 
 ## 📝 Deskripsi
 
-### Tugas Modul: [Lihat Laporan Tugas](dokumen/Modul_PAM_4.pdf)
+### Tugas Modul: [Lihat Laporan Modul 4](Modul_PAM_4.pdf)
 
 Aplikasi pemesanan tiket sederhana yang menerapkan State Hoisting,
 LaunchedEffect, dan rememberSaveable menggunakan Jetpack Compose.
@@ -38,18 +38,6 @@ menampilkan data dan meneruskan interaksi pengguna melalui callback.
 - Kotlin Coroutines
 - Android Studio
 
-## 🧩 Komponen Jetpack Compose
-
-- Scaffold dan TopAppBar: struktur halaman dan judul aplikasi.
-- Column dan Row: mengatur susunan komponen.
-- Text: menampilkan harga, jumlah, total, dan status pemesanan.
-- OutlinedTextField: menerima input nama pembeli.
-- Button: menjalankan pemesanan tiket.
-- FilledTonalButton: menambah dan mengurangi jumlah tiket.
-- HorizontalDivider: memberi garis pemisah.
-- Surface: menampilkan latar status pemesanan.
-- CircularProgressIndicator: menampilkan indikator proses.
-- Modifier: mengatur ukuran, jarak, dan tata letak komponen.
 
 ## 🔄 Pengelolaan State dan Side Effect
 
