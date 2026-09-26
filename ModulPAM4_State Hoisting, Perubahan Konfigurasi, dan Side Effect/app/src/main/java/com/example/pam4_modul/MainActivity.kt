@@ -56,6 +56,10 @@ class MainActivity : ComponentActivity() {
                             "Number $number is shown!"
                         )
                     }
+
+                    LaunchedEffect(Unit) {
+                        number = Repo.getData()
+                    }
                 }
             }
         }
