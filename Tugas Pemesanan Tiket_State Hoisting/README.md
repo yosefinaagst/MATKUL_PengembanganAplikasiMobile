@@ -52,5 +52,3 @@ menampilkan data dan meneruskan interaksi pengguna melalui callback.
 - **delay:** menunggu proses pemesanan tanpa memblokir UI.
   Waktu selesai disimpan agar rotasi tidak mengulang durasi
   pemrosesan dari awal.
-
-> Pemesanan merupakan simulasi lokal dan belum terhubung ke server.
