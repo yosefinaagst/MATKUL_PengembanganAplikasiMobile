@@ -28,7 +28,7 @@ menampilkan data dan meneruskan interaksi pengguna melalui callback.
 
 ## 📸 Screenshot Hasil
 
-
+![UI Aplikasi](UI.png)
 
 ## 🛠️ Techstack
 
