@@ -2,7 +2,6 @@
 
 **Nama:** Yosefina Agustine K. Ofong  
 **NIM:** 245150400111030
-**Kelas** Pengembangan Aplikasi Mobile
 
 ## 📝 Deskripsi
 
