@@ -2,6 +2,7 @@
 
 **Nama:** Yosefina Agustine K. Ofong  
 **NIM:** 245150400111030
+**Kelas** Pengembangan Aplikasi Mobile
 
 ## 📝 Deskripsi
 
@@ -37,7 +38,6 @@ menampilkan data dan meneruskan interaksi pengguna melalui callback.
 - Material 3
 - Kotlin Coroutines
 - Android Studio
-
 
 ## 🔄 Pengelolaan State dan Side Effect
 
