@@ -33,7 +33,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// PARENT: menyimpan state dan menangani logika pemesanan.
 @Composable
 fun TiketParent() {
     val hargaTiket by rememberSaveable {
@@ -132,7 +131,6 @@ fun TiketParent() {
     )
 }
 
-// CHILD: menampilkan data dan meneruskan event ke parent.
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TiketContent(
