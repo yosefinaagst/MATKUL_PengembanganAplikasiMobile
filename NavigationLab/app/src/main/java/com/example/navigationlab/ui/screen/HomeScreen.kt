@@ -16,7 +16,7 @@ import androidx.core.app.NotificationCompat
 
 @Composable
 fun HomeScreen (
-    onOpenDetai: (Int) -> Unit,
+    onOpenDetail: (Int) -> Unit,
     onOpenProfile: () -> Unit
 ) {
     Column(
@@ -27,7 +27,7 @@ fun HomeScreen (
     ) {
         Text("Home", style = MaterialTheme.typography.headlineMedium)
 
-        Button(onClick = { onOpenDetai(101) }) {
+        Button(onClick = { onOpenDetail(101) }) {
             Text("Buka Detail Mahasiswa 101")
         }
 
