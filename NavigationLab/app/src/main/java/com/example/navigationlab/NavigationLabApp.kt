@@ -1,9 +1,11 @@
 package com.example.navigationlab
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.navigationlab.ui.screen.DetailScreen
 import com.example.navigationlab.ui.screen.HomeScreen
 import com.example.navigationlab.ui.screen.ProfileScreen
@@ -27,7 +29,16 @@ fun NavigationLabApp() {
             )
         }
 
-        composable(Routes.DETAIL) {
+        composable(
+            Routes.DETAIL,
+            arguments = listOf(
+                navArgument("studentId") {
+                    type = NavType.IntType
+                }
+            )
+        ) { backStackEntry ->
+            val studentId =
+                backStackEntry.arguments?.getInt("studentId") ?: 0
 
             DetailScreen(
                 studentId = studentId,

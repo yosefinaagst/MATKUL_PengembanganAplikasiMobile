@@ -11,8 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.core.app.NotificationCompat
+
 
 @Composable
 fun HomeScreen (
@@ -22,10 +21,13 @@ fun HomeScreen (
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(24.dp),
+            .padding(24.dp, vertical = 52.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("Home", style = MaterialTheme.typography.headlineMedium)
+        Text("Home",
+            style = MaterialTheme.typography.headlineMedium,
+//            modifier = Modifier.align(Alignment.CenterHorizontally)
+        )
 
         Button(onClick = { onOpenDetail(101) }) {
             Text("Buka Detail Mahasiswa 101")
